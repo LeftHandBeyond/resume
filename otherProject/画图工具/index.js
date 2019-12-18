@@ -45,6 +45,7 @@ function drawLine(points, lineWidth, color) {
 canvas.height=window.innerHeight-document.getElementById('toolbar').offsetHeight;
 canvas.width=window.innerWidth;
 canvas.onmousedown = canvas.ontouchstart = function (e) {
+    e.preventDefault();
     var event = e || window.event;
     var x = event.clientX||event.touches[0].clientX;
     var y = event.clientY||event.touches[0].clientY;
@@ -53,6 +54,7 @@ canvas.onmousedown = canvas.ontouchstart = function (e) {
     var length = picHistory.length;
     var points = [{ x: x, y: y }]
     canvas.onmousemove = canvas.ontouchmove = function (e) {
+        e.preventDefault();
         var event1 = e || window.event;
         width = (event1.clientX||event1.touches[0].clientX) - x;
         height = (event1.clientY||event1.touches[0].clientY) - y;
@@ -76,6 +78,7 @@ canvas.onmousedown = canvas.ontouchstart = function (e) {
         drawAll()
     }
     canvas.onmouseup = canvas.ontouchend = function (e) {
+        e.preventDefault();
         canvas.onmousemove = canvas.ontouchmove = null;
     }
 }
