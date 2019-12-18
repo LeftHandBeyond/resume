@@ -60,7 +60,7 @@ canvas.onmousedown = canvas.ontouchstart = function (e) {
             picHistory.pop();
         }
         if (pencilType == 3) {
-            points.push({ x: event1.clientX, y: event1.clientY })
+            points.push({ x: event1.clientX||event1.touches[0].clientX, y: event1.clientY||event1.touches[0].clientY })
         }
         picHistory.push({
             points: points,
