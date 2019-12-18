@@ -42,13 +42,13 @@ function drawLine(points, lineWidth, color) {
     }
     ctx.stroke();
 }
-canvas.height=window.innerHeight-document.getElementById('toolbar').offsetHeight;
-canvas.width=window.innerWidth;
+canvas.height = window.innerHeight - document.getElementById('toolbar').offsetHeight;
+canvas.width = window.innerWidth;
 canvas.onmousedown = canvas.ontouchstart = function (e) {
     e.preventDefault();
     var event = e || window.event;
-    var x = event.clientX||event.touches[0].clientX;
-    var y = event.clientY||event.touches[0].clientY;
+    var x = event.clientX || event.touches[0].clientX;
+    var y = event.clientY || event.touches[0].clientY;
     var width;
     var height;
     var length = picHistory.length;
@@ -56,13 +56,13 @@ canvas.onmousedown = canvas.ontouchstart = function (e) {
     canvas.onmousemove = canvas.ontouchmove = function (e) {
         e.preventDefault();
         var event1 = e || window.event;
-        width = (event1.clientX||event1.touches[0].clientX) - x;
-        height = (event1.clientY||event1.touches[0].clientY) - y;
+        width = (event1.clientX || event1.touches[0].clientX) - x;
+        height = (event1.clientY || event1.touches[0].clientY) - y;
         if (picHistory.length > length) {
             picHistory.pop();
         }
         if (pencilType == 3) {
-            points.push({ x: event1.clientX||event1.touches[0].clientX, y: event1.clientY||event1.touches[0].clientY })
+            points.push({ x: event1.clientX || event1.touches[0].clientX, y: event1.clientY || event1.touches[0].clientY })
         }
         picHistory.push({
             points: points,
@@ -78,7 +78,6 @@ canvas.onmousedown = canvas.ontouchstart = function (e) {
         drawAll()
     }
     canvas.onmouseup = canvas.ontouchend = function (e) {
-        e.preventDefault();
         canvas.onmousemove = canvas.ontouchmove = null;
     }
 }
@@ -103,11 +102,11 @@ var types = document.getElementsByName('type');
 for (var i = 0; i < types.length; i++) {
     types[i].onclick = function (e) {
         pencilType = Number(this.value);
-       
-       types.forEach(function(e,i){
-           e.style.color='white';
-       })
-       this.style.color='yellow';
+
+        types.forEach(function (e, i) {
+            e.style.color = 'white';
+        })
+        this.style.color = 'yellow';
     }
 }
 
