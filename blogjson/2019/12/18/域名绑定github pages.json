@@ -1,0 +1,31 @@
+{
+    "title": "域名绑定github pages",
+    "date": "2019-12-18",
+    "time": "",
+    "title_body": [
+        {
+            "tag": "h1",
+            "type": "标题",
+            "content": "一、购买域名",
+            "param":{}
+        },
+        {
+            "tag": "p",
+            "type": "内容",
+            "content": "在万网中购买域名",
+            "param":{}
+        },
+        {
+            "tag": "blockquote",
+            "type": "重点内容",
+            "content": "测试内容",
+            "param":{}
+        },
+        {
+            "tag": "p",
+            "type": "图片",
+            "content": "/image/logo.png",
+            "param":{}
+        }
+    ]
+}
