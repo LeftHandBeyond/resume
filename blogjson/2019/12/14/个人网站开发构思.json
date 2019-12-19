@@ -12,13 +12,13 @@
         {
             "tag": "p",
             "type": "内容",
-            "content": "展示个人简历",
+            "content": "展示个人简历。",
             "param": {}
         },
         {
             "tag": "blockquote",
             "type": "重点内容",
-            "content": "实现方法：简历pdf文件渲染在canvas画布中。后续更新简历，只需要更新pdf文件即可。",
+            "content": "实现方法：简历pdf文件渲染在canvas画布中。<br>后续更新简历，只需要更新pdf文件即可。",
             "param": {}
         },
         {
@@ -37,6 +37,24 @@
             "tag": "blockquote",
             "type": "重点内容",
             "content": "实现方法：使用axios以及json，获取日志列表json文件在页面中渲染。后续更新json文件即可。",
+            "param": {}
+        },
+        {
+            "tag": "h1",
+            "type": "标题",
+            "content": "三、项目经验",
+            "param": {}
+        },
+        {
+            "tag": "p",
+            "type": "内容",
+            "content": "展示个人的一些项目以及小功能。",
+            "param": {}
+        },
+        {
+            "tag": "blockquote",
+            "type": "重点内容",
+            "content": "实现方法：使用axios以及json，获取项目列表json文件在页面中渲染。后续更新json文件即可。",
             "param": {}
         }
     ]
