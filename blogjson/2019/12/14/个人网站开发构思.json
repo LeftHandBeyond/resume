@@ -18,7 +18,7 @@
         {
             "tag": "blockquote",
             "type": "重点内容",
-            "content": "实现方法：简历pdf文件渲染在canvas画布中。<br>后续更新简历，只需要更新pdf文件即可。",
+            "content": "实现方法：简历pdf文件渲染在canvas画布中。后续更新简历，只需要更新pdf文件即可。",
             "param": {}
         },
         {
@@ -36,7 +36,13 @@
         {
             "tag": "blockquote",
             "type": "重点内容",
-            "content": "实现方法：使用axios以及json，获取日志列表json文件在页面中渲染。后续更新json文件即可。",
+            "content": "列表实现方法：使用axios以及json，获取日志列表json文件在页面中渲染。后续更新json文件即可。",
+            "param": {}
+        },
+        {
+            "tag": "blockquote",
+            "type": "重点内容",
+            "content": "日志内容：使用vue-router的动态路由技术，根据路由获取日志内容json文件在页面中渲染。",
             "param": {}
         },
         {
@@ -54,7 +60,7 @@
         {
             "tag": "blockquote",
             "type": "重点内容",
-            "content": "实现方法：使用axios以及json，获取项目列表json文件在页面中渲染。后续更新json文件即可。",
+            "content": "列表实现方法：使用axios以及json，获取项目列表json文件在页面中渲染。后续更新json文件即可。",
             "param": {}
         }
     ]
