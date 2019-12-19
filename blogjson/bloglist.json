@@ -1,4 +1,4 @@
-{
+﻿{
   "jsonfile": "日志列表",
   "datalist": [
     {
@@ -10,13 +10,13 @@
     {
       "href": "/blog#/blog/2019/12/18/域名绑定github%20pages",
       "text": "域名绑定github pages",
-      "date": "2019-12-10",
+      "date": "2019-12-18",
       "target": "_top"
     },
     {
-      "href": "/",
+      "href": "/blog#/blog/2019/12/14/个人网站开发构思",
       "text": "个人网站开发构思",
-      "date": "2019-12-10",
+      "date": "2019-12-14",
       "target": "_top"
     }
   ]

@@ -1,0 +1,43 @@
+{
+    "title": "个人网站开发构思",
+    "date": "2019-12-18",
+    "time": "",
+    "title_body": [
+        {
+            "tag": "h1",
+            "type": "标题",
+            "content": "一、个人简历",
+            "param": {}
+        },
+        {
+            "tag": "p",
+            "type": "内容",
+            "content": "展示个人简历",
+            "param": {}
+        },
+        {
+            "tag": "blockquote",
+            "type": "重点内容",
+            "content": "实现方法：简历pdf文件渲染在canvas画布中。后续更新简历，只需要更新pdf文件即可。",
+            "param": {}
+        },
+        {
+            "tag": "h1",
+            "type": "标题",
+            "content": "二、网络日志",
+            "param": {}
+        },
+        {
+            "tag": "p",
+            "type": "内容",
+            "content": "记录个人的一些技术心得、日常内容。",
+            "param": {}
+        },
+        {
+            "tag": "blockquote",
+            "type": "重点内容",
+            "content": "实现方法：使用axios以及json，获取日志列表json文件在页面中渲染。后续更新json文件即可。",
+            "param": {}
+        }
+    ]
+}
