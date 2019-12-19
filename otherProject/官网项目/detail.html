@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script src="api/news_list.js"></script>
+    <script src="api/news_list2.js"></script>
+	<style>
+     .middle{
+     	width: 1200px;
+     	height: auto;
+     	margin:0 auto;
+     }
+     .news{
+     	width: 100%;
+     	margin-bottom: 30px;
+     	background: #fafafc;
+     }
+     .focus{
+     	box-shadow:5px 5px 15px #d6d6d6
+     }
+	</style>
+</head>
+<body>
+	<div class="middle">
+		
+	</div>
+	<script>
+     var craeteNewList=function(data){
+           function createNews(ele,json){
+           	var $div=("<div class='news'></div>");
+               $(div).hover(function(){
+               	 $(this).addClass('focus');
+               },function(){
+               	 $(this).removeClass("focus")
+               })
+               $(div).html('<div class="left" style="background:url('+json.img+')></div>")\
+                    <div class="center">\
+                        <p>'+json.title+'</p>\
+                        <span>'+json.type+'</span>\
+                        <div>'+json.detail+'</div>\
+                    </div>\
+                      <div class="right">\
+                        <p>'+json.date+'</p>\
+                        <span>'+json.year+'</span>\
+                        <div></div>\
+                    </div>\
+                    <p style="clear:both"></p>')
+                    ele.append($div)          
+       }
+       $div.appendTo($(".middle"));
+       createNew($div,data[i])
+     }
+	</script>
+</body>
+</html>

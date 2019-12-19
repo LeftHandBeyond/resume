@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+<title>我的购物车-编辑</title>
+<link href="css/base.css" type="text/css" rel="stylesheet"/>
+<link href="css/common.css" type="text/css" rel="stylesheet"/>
+<link href="css/css3.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+</head>
+<body>
+    <div class="main">
+    	<ul class="pL5 pR5 spcart_ul">
+        	<li class="mT10 clearfix">
+				<i class="i1"></i>
+                <img src="img/myorder_img2.png" class="fl pL10">
+                <div class="fl spcart_div1 pL5">
+                	<h3 class="font14 c333">蓝色纯T</h3>
+                    <h3 class="font11 caaa">颜色：蓝色   尺码：M</h3>	
+                	<span class="font18 cff6">300</span><span class="font11 caaa"> 积分</span>
+                </div>
+                <span class="fr caaa mT5">×1</span>
+                <div class="gw_num">
+                    <em class="jian">-</em>
+                        <input type="text" value="1" class="num"/>
+                    <em class="add">+</em>
+                </div>
+            </li>
+            <li class="mT10 clearfix">
+				<i class="i2"></i>
+                <img src="img/myorder_img3.png" class="fl pL10">
+            <div class="fl spcart_div1 pL5">
+                	<h3 class="font14 c333">黑白涂鸦T</h3>
+                    <h3 class="font11 caaa">颜色：黑白   尺码：M</h3>	
+                	<span class="font18 cff6">500</span><span class="font11 caaa"> 积分</span>
+                </div>
+                <span class="fr caaa mT5">×1</span>
+                <div class="gw_num fr">
+                    <em class="jian">-</em>
+                        <input type="text" value="1" class="num"/>
+                    <em class="add">+</em>
+                </div>
+            </li>
+            <li class="mT10 clearfix">
+				<i class="i1"></i>
+                <img src="img/myorder_img1.png" class="fl pL10">
+                <div class="fl spcart_div1 pL5">
+                	<h3 class="font14 c333">GO GO  HARIS 印花卫衣</h3>
+                    <h3 class="font11 caaa">颜色：黑色  尺码：M</h3>	
+                	<span class="font18 cff6">500</span><span class="font11 caaa"> 积分</span>
+                </div>
+                <span class="fr caaa mT5">×1</span>
+                <div class="gw_num fr">
+                    <em class="jian">-</em>
+                        <input type="text" value="1" class="num"/>
+                    <em class="add">+</em>
+                </div>
+			</li>
+        </ul>
+        
+        <div class="spcart_foot pL5 pR5">
+        	<img src="img/spcart_ico1.png" id="qx" width="6%" class="fl mT20 ">
+            <span class="font13 c333 pL2">全选</span>
+			<a class="fr spcart_a1" href="spcart.html">完成</a>
+			<a class="fr spcart_a2" href="myorder.html">结算</a>
+            <div class="fr texR pR2" style="line-height:17px;margin-top:10px;">
+            	<h3 class="font12 cf93">合计：800积分</h3>
+                <h3 class="font12 caaa">含运费</h3>
+            </div>
+        </div>
+	</div>
+</body>
+<script>
+//购物车
+$(document).ready(function(){
+//加的效果
+$(".add").click(function(){
+var n=$(this).prev().val();
+var num=parseInt(n)+1;
+if(num==0){ return;}
+$(this).prev().val(num);
+});
+//减的效果
+$(".jian").click(function(){
+var n=$(this).next().val();
+var num=parseInt(n)-1;
+if(num==0){ return}
+$(this).next().val(num);
+});
+})
+//勾选、全选
+$(function(){
+    $(".spcart_ul li .i1").click(function() {
+        $(this).toggleClass('i1').toggleClass('i2');
+    });
+	
+})
+
+</script>
+</html>

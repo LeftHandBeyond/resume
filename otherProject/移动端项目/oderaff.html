@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+<title>订单确认页面</title>
+<link href="css/base.css" type="text/css" rel="stylesheet"/>
+<link href="css/common.css" type="text/css" rel="stylesheet"/>
+<link href="css/css3.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+<body style="background:#eeeeee;">
+    <div class="main">
+<!--输入密码开始--> 
+	<div class="commu_div6 hide"></div>   
+    <div class="password hide">
+    	<div class="wd100 pas_div">
+    	<h3 class="pas_h3">
+        <img src="img/del.png" width="12" height="12" class="fl pL5 close">
+        <span>请输入支付密码</span></h3>
+        </div>
+        <h4 class="font20 texC mT10 mB10 wd100 caaa">积分<span class="cff6 pL2">300</span></h4>
+        <div class="pwd-box1 mT5">  
+            <input type="tel" maxlength="6" class="pwd-input1" id="pwd-input1">  
+            <div class="fake-box1">  
+                <input type="password" readonly>  
+                <input type="password" readonly>  
+                <input type="password" readonly>  
+                <input type="password" readonly>  
+                <input type="password" readonly>  
+                <input type="password" readonly>  
+            </div>  
+        </div>
+        <P class="wd100 clearfix mB10 mT10"><span class="fr font15 caaa pR5">剩余积分：<font class=" cff6"> 3500</font></span></P>
+		</div>
+<!--输入密码结束-->    
+   	<div class="aff_head">
+    	<i class="aff_i1"></i>
+    	<div class="aff_head1 font14 c333 clearfix">
+        	<h3 class="mT5">
+            	<span class="fl">老王</span>
+                <span class="fl pL10">15966666666</span>
+            </h3>
+            <p class="fl mB20">浙江省 杭州市 拱墅区 乐富智汇园10幢4楼</p>
+        </div>
+        <a href="add.html"><i class="aff_i2"></i></a>
+    </div>
+        	<li class=" aff_li1 clearfix bgfff mT10">
+        <img src="img/seeoder1.png" width="45" height="53.5" class="fl">
+        <div class="pL2 fl lh27">
+        	<h3 class="font14 c333">飞科剃须刀</h3>
+            <h4 class="font12 caaa">颜色：蓝色   尺码：M</h4>
+        </div>
+        <div class="fr lh27">
+        	<h3 class="texR"><span class=" cff6 font18">300</span> 积分</h3>
+            <h4 class="font12 caaa texR">×1</h4>
+        </div>
+        </li>
+		<ul class="aff_ul font14 c333 clearfix mT10">
+        	<li class="clearfix">
+            	<span class="fl">配送方式</span>
+            	<span class="fr">免运费，天天快递</span>
+            </li>
+        	<li class="clearfix">
+            	<span class="fl">商品金额</span>
+            	<span class="fr">300积分</span>
+            </li>
+        	<li class="clearfix">
+            	<span class="fl">运费</span>
+            	<span class="fr">+¥ 0.00</span>
+            </li>
+        	<li>
+            	<input type="text" placeholder="留言" class="aff_input"> 
+            </li>
+        </ul>
+        <div class="aff_div">
+        	<p class="fl wd50">
+                <span class="font15 c333">您需要支付：</span>
+                <span class="pL2 cf93"><img src="img/coin.png" width="14" height="13" class="pR2">300</span>
+            </p>
+            <input type="submit" value="提交订单" class="font15 cfff aff_input1">
+        </div>
+	</div>
+</body>
+<script type="text/javascript">
+$(function(){
+		$('.commu_div6').height($(window).height());
+		//弹出
+		$('.aff_input1').click(function(){
+			$('.commu_div6').fadeIn(500);
+			$('.password').fadeIn(500);
+		})
+		$('.close').click(function(){
+			$('.commu_div6').fadeOut(500);
+			$('.password').fadeOut(500);
+		})
+		
+	var $input = $(".fake-box1 input");  
+            $("#pwd-input1").on("input", function() {  
+                var pwd = $(this).val().trim();  
+                for (var i = 0, len = pwd.length; i < len; i++) {  
+                    $input.eq("" + i + "").val(pwd[i]);  
+                }  
+                $input.each(function() {  
+                    var index = $(this).index();  
+                    if (index >= len) {  
+                        $(this).val("");  
+                    }  
+                });  
+                if (len == 6) {  
+                    //执行其他操作  
+                }  
+	});  
+
+	})
+</script>
+
+</html>

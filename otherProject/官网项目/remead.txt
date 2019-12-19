@@ -1,0 +1,11 @@
+about_me.html         关于谱蓝
+classic_case.html     典型案例
+contact_us.html       联系我们
+employ.html           企业招聘  
+index.html            首页
+news.html             新闻详情
+new_info.html         新闻资讯         
+product_search.html   搜索结果
+product_service.html  产品服务
+product_service2.html 产品详情
+article_case.html     案例详情

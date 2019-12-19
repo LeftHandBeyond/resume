@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="api/news_list.js"></script>
+    <style>
+        .middle{
+            width: 1200px;
+            margin:0 auto;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .focus{
+            box-shadow: 5px 5px 15px #fafafd;
+        }
+        .focus .left{
+            border: 10px solid #ff5c0c  !important;
+        }
+        .middle>div{
+            display: none;
+        }
+        .middle>div:first-child{
+            display: block;
+        }
+        .focus .right span,.focus .right p{
+            margin-left: -30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="middle"></div>
+    <script>
+       /* var createNewsList=function(data){
+           function  createList(ele,json){
+              var $div=$('<div class="news"></div>');
+              $div.hover(function(){
+                  $(this).addClass("focus");
+              },function(){
+                  $(this).removeClass("focus")
+              })
+               $div.html('<div class="left" style="background: url('+json.img+')"></div>\<div class="center"></div>\<p>'+json.title+'</p>\<span>'+json.type+'</span>\<div>'+json.detail+'</div>\ <div class="right">\
+                        <p>'+json.date+'</p>\
+                        <span>'+json.year+'</span>\
+                        <div></div>\
+                    </div>\
+                    <p style="clear: both;"></p>');
+              ele.append($div)
+           }
+           var $div="";
+           for(var i=0;i<data.length;i++){
+               if(i%7==0){
+                   var page=(i/7+1);
+                   $div=$("<div id='page"+page+"'></div>");
+                   $div.appendTo($(".middle"))
+
+               }
+               createList($div,data[i])
+           }
+        }*/
+       //封装函数，根据新闻数据创建新闻分页列表
+       var createNewsList=function(data){
+           //封装函数，根据新闻所在元素和具体新闻数据创建新闻
+           function createNew(ele,json){
+               var $div=$('<div class="new"></div>')
+               $div.hover(function () {
+                   $(this). addClass("focus")
+               }, function () {
+                   $(this).removeClass("focus")
+               })
+               $div.html('<div class="left" style="background: url('+json.img+')"></div>\
+                    <div class="center">\
+                        <p>'+json.title+'</p>\
+                         <span>'+json.type+'</span>\
+                        <div>'+json.detail+'</div>\
+                    </div>\
+                    <div class="right">\
+                        <p>'+json.date+'</p>\
+                        <span>'+json.year+'</span>\
+                        <div></div>\
+                    </div>\
+                    <p style="clear: both;"></p>')
+               ele.append($div)
+           }
+//列表渲染，遍历新闻数据，调用createNew创建新闻的分页列表以及页码
+           var $div="";
+           for(var i=0;i<data.length;i++){
+               if(i%7==0){
+                   var page=(i/7+1)
+                   $div=$("<div id='page"+page+"'></div>")
+                   $div.appendTo($(".middle"))
+                   /*  var $span=$("<span>"+page+"</span>")
+                    $span.click(function(){
+                    var $page=$(this).html()
+                    $(".foot span").removeClass("clicked")
+                    $(this).addClass("clicked")
+                    $(".middle>div").css("display","none")
+                    $("#page"+$page).css("display","block")
+                    })*/
+                   //$(".foot a").eq(2).before($span)
+               }
+               createNew($div,data[i])
+           }
+           // $(".foot span").eq(0).addClass("clicked")
+       }
+       createNewsList(newsList)
+    </script>
+</body>
+</html>

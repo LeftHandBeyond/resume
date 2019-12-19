@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+<title>上传作业</title>
+<link href="css/base.css" type="text/css" rel="stylesheet"/>
+<link href="css/common.css" type="text/css" rel="stylesheet"/>
+<link href="css/css3.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+</head>
+<body>
+    <div class="main">
+<!--选择模块开始-->
+<div class="commu_div6 hide"></div>
+<div class="tag clearfix hide">
+    <span class="fl upload_span1 fl">
+    	综合板块  <img src="img/del.png" width="11" height="10" class="upload_img">
+    </span>
+    <span class="fl upload_span2 fr">
+    	板块之二  <img src="img/del.png" width="11" height="10" class="upload_img">
+    </span>
+    <span class="fl upload_span3 fl mT5">
+    	板块之三  <img src="img/del.png" width="11" height="10" class="upload_img">
+    </span>
+    <span class="fl upload_span4 fr mT5">
+    	板块之四  <img src="img/del.png" width="11" height="10" class="upload_img">
+    </span>
+    <span class="fl upload_span5 fl mT5">
+    	板块之五  <img src="img/del.png" width="11" height="10" class="upload_img">
+    </span>
+    <span class="fl upload_span6 fr mT5">
+    	板块之六  <img src="img/del.png" width="11" height="10" class="upload_img">
+    </span>
+</div>
+<!--选择模块结束-->
+<!--积分弹窗开始-->
+<div class="commu_div7 hide"></div>
+<div class="point hide">
+	<h3 class="font15 c333 texC wd100 mT10 mB10">选择积分值</h3>
+    <input type="text" value="20" class="point_inp">
+    <div class="mT10">
+        <input type="submit" value="确定" class="point_inp1">
+    </div>
+    <h4 class="font12 c333 texC mT5 mB5">您可用积分：<span class="c89c"> 31</span></h4>
+</div>
+<!--积分弹窗结束-->
+    	<div class="upload_content">
+        	<ul class="clearfix">
+                <li class="wd90 pL5 pR5 on">
+                    <input name="标题" type="text" class="upload_input" id="标题" placeholder="标题，5-30个字" min="5" maxlength="30">
+                </li>
+                <li class="wd90 pL5 pR5 mT10">
+                    <textarea name="详细介绍" rows="10" class="upload_textarea" placeholder="详细介绍"></textarea>
+              </li>
+            </ul>
+		</div>
+        <p class="wd90 pL5 pR5 mT5 clearfix"><span class="fl upload_span"><img src="img/upload_ico.png" width="11" height="10" class="upload_img">  选择标签</span></p>
+        <div class="upload_div wd90 pL5 pR5 clearfix mT10">
+        	<ul>
+            	<li><img src="img/upload_ico1.png"></li>
+                <li><img src="img/upload_ico3.png"></li>
+                <li><img src="img/upload_ico2.png" class="upload_img1"></li>
+            </ul>
+        </div>
+        
+    </div>
+</body>
+<script type="text/javascript">
+	$(function(){
+		$('.commu_div7').height($(window).height());
+		//弹出
+		$('.upload_img1').click(function(){
+			$('.commu_div7').fadeIn(500);
+			$('.point').fadeIn(500);
+		})
+		$('.commu_div7').click(function(){
+			$(this).fadeOut(500);
+			$('.point').fadeOut(500);
+		})
+	})
+	
+	$(function(){
+		$('.commu_div6').height($(window).height());
+		//弹出
+		$('.upload_span').click(function(){
+			$('.commu_div6').fadeIn(500);
+			$('.tag').fadeIn(500);
+		})
+		$('.commu_div6').click(function(){
+			$(this).fadeOut(500);
+			$('.tag').fadeOut(500);
+		})
+	})
+</script>
+</html>
