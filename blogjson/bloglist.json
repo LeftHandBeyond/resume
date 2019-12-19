@@ -1,5 +1,6 @@
-{"jsonfile":"日志列表",
-"datalist":[
+{
+  "jsonfile": "日志列表",
+  "datalist": [
     {
       "href": "/resume",
       "text": "canvas分辨率问题",
@@ -18,4 +19,5 @@
       "date": "2019-12-10",
       "target": "_top"
     }
-  ]}
+  ]
+}
